@@ -86,13 +86,13 @@ markDate(DateTime _currentDate2) {
     Event event = markedDateMap.events[_currentDate2][i];
     if (event.tag == "holiday") {
       holidayEventList.add(event.title);
-      holidayKeyList.add(event.uKey);
+      holidayKeyList.add(event.ukey);
     } else if (event.tag == "task") {
       taskEventList.add(event.title);
-      taskKeyList.add(event.uKey);
+      taskKeyList.add(event.ukey);
     } else if (event.tag == "completed") {
       completedEventList.add(event.title);
-      completedKeyList.add(event.uKey);
+      completedKeyList.add(event.ukey);
     }
   }
 }
@@ -120,7 +120,7 @@ markHoliday(response, removeHoliday) {
         // print("response00000000 dataList type is ${dataList[j]} value key is ");
         if (dataList[j] == null) continue;
         // String title = dataList[j]["title"];
-        String uKey = dataList[j]['key'];
+        String ukey = dataList[j]['key'];
         // String tag = dataList[j]['tag'];
         // print("title is $title");
 
@@ -128,10 +128,10 @@ markHoliday(response, removeHoliday) {
         //   date: _date,
         //   title: title,
         //   icon: eventIconHoliday(_date.day.toString()),
-        //   uKey: uKey,
+        //   ukey: ukey,
         //   tag: tag,
         // );
-        markedDateMap.getEvents(_date).removeWhere((item) => item.uKey == uKey);
+        markedDateMap.getEvents(_date).removeWhere((item) => item.ukey == ukey);
       }
     }
   }
@@ -155,7 +155,7 @@ markHoliday(response, removeHoliday) {
       // print("response00000000 dataList type is ${dataList[j]} value key is ");
       if (dataList[j] == null) continue;
       String title = dataList[j]["title"];
-      String uKey = dataList[j]['key'];
+      String ukey = dataList[j]['key'];
       String tag = dataList[j]['tag'];
       bool typeGov = dataList[j]['type'] == 'government' ? true : false;
       // print("title is $title");
@@ -164,8 +164,8 @@ markHoliday(response, removeHoliday) {
         date: _date,
         title: title,
         icon: eventIconHoliday(_date.day.toString(), typeGov),
-        uKey: uKey,
         tag: tag,
+        ukey: ukey
       );
       markedDateMap.add(_date, _event);
     }
@@ -477,7 +477,7 @@ class _CalendarPageState extends State<CalendarPage>
                   "response00000000 dataList type is ${dataList[j]} value key is ");
               if (dataList[j] == null) continue;
               String title = dataList[j]["title"];
-              String uKey = dataList[j]['key'];
+              String ukey = dataList[j]['key'];
               String tag = dataList[j]['tag'];
               // print("title is $title");
 
@@ -485,7 +485,7 @@ class _CalendarPageState extends State<CalendarPage>
                 date: _date,
                 title: title,
                 icon: type == 'task' ? eventIconTask : eventIconComplete,
-                uKey: uKey,
+                ukey: ukey,
                 tag: tag,
               );
               markedDateMap.add(_date, _event);

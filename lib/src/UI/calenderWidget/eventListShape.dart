@@ -240,7 +240,7 @@ Widget feildShape(
           try {
             calender.markedDateMap
                 .getEvents(_currentDate2)
-                .removeWhere((item) => item.uKey == key);
+                .removeWhere((item) => item.ukey == key);
             String path;
             String formattedDate = _currentDate2.toString().substring(0, 10);
             if (type == 'task') {
@@ -331,7 +331,7 @@ Widget feildShape(
 
           calender.markedDateMap
               .getEvents(_currentDate2)
-              .removeWhere((item) => item.uKey == keyHere);
+              .removeWhere((item) => item.ukey == keyHere);
 
           calender.taskEventList?.removeAt(index);
           calender.taskKeyList?.removeAt(index);
@@ -382,7 +382,7 @@ Widget feildShape(
             date: _currentDate2,
             title: title,
             icon: calender.eventIconComplete,
-            uKey: keyHere,
+            ukey: keyHere,
             tag: "completed",
           );
           calender.markedDateMap.getEvents(_currentDate2).add(event);

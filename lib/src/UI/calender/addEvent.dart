@@ -40,7 +40,7 @@ _handleSubmit(
       date: date,
       title: eventController.text,
       icon: calender.eventIconTask,
-      uKey: _uKey,
+      ukey: _uKey,
       tag: type,
     );
 
@@ -145,7 +145,7 @@ _handleEdit(
     date: date,
     title: eventController.text,
     icon: calender.eventIconTask,
-    uKey: _uKey,
+    ukey: _uKey,
     tag: type,
   );
 
@@ -180,7 +180,7 @@ _handleEdit(
 
     calender.markedDateMap
         .getEvents(date)
-        .removeWhere((item) => item.uKey == key);
+        .removeWhere((item) => item.ukey == key);
 
     // print("r after $r");
     r.add(data);
