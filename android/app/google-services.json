@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "230013601602",
+    "firebase_url": "https://calendarapp-b9cf0.firebaseio.com",
+    "project_id": "calendarapp-b9cf0",
+    "storage_bucket": "calendarapp-b9cf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230013601602:android:51f20010a8c4b227",
+        "android_client_info": {
+          "package_name": "com.rit.calender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230013601602-mmqnokuq1h5378iuk2gqfhv4ssnkrjhh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rit.calender",
+            "certificate_hash": "1ba38d5173cda39cd11af57c77a3a9c148262c98"
+          }
+        },
+        {
+          "client_id": "230013601602-3g1p3umk5rmbh72minad15hj96agv9rh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7sqeBjovO1-OF4Ol6_-ZzP9v5NF11jhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230013601602-3g1p3umk5rmbh72minad15hj96agv9rh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4776830761593608~1085456627"
+    }
+  ],
+  "configuration_version": "1"
+}
